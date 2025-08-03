@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="absolute inset-0 z-0 overflow-hidden">
+    <video autoplay muted loop class="w-full h-full object-cover">
+        <source src="{% static 'img/7989682-hd_1920_1080_25fps.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+
+<div class="relative z-10 container flex items-center justify-center h-screen text-gray-100">
+    <div class="flex">
+        <div class="flex w-[512px]">
+            <div class="mt-[30px]">
+                <h1 class="text-[24px] font-medium  rotate-[-90deg]">Menu</h1>
+            </div>
+            <div>
+                <h2 class="text-[64px] font-bold ">Shodiyorbek's</h2>
+                <h2 class="text-[64px] font-bold">Portfolio</h2>
+                <h2 class="text-[64px] font-bold">Website</h2>
+            </div>
+        </div>
+
+        <div class="w-[512px] flex items-end justify-center">
+            <div>
+                <p class="text-[24px] font-medium">shodiyorbek057@gmail.com</p>
+                <p class="text-[24px] font-semibold mt-1"><i class="fa-solid fa-phone-volume text-[20px]"></i> +998 97
+                    213 8503</p>
+
+                <div class="flex gap-4 mt-3">
+                    <a href="https://www.instagram.com/shodiyorbek.qambaraliyev/">
+                        <svg id="Apple" viewBox="0 0 512 512" width="28" height="28" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: url(#Nepojmenovaný_přechod_27);
+                                    }
+
+                                    .cls-2 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                                <linearGradient gradientUnits="userSpaceOnUse" id="Nepojmenovaný_přechod_27" x1="328.27"
+                                    x2="183.73" y1="508.05" y2="3.95">
+                                    <stop offset="0" stop-color="#ffdb73" />
+                                    <stop offset="0.08" stop-color="#fdad4e" />
+                                    <stop offset="0.15" stop-color="#fb832e" />
+                                    <stop offset="0.19" stop-color="#fa7321" />
+                                    <stop offset="0.23" stop-color="#f6692f" />
+                                    <stop offset="0.37" stop-color="#e84a5a" />
+                                    <stop offset="0.48" stop-color="#e03675" />
+                                    <stop offset="0.55" stop-color="#dd2f7f" />
+                                    <stop offset="0.68" stop-color="#b43d97" />
+                                    <stop offset="0.97" stop-color="#4d60d4" />
+                                    <stop offset="1" stop-color="#4264db" />
+                                </linearGradient>
+                            </defs>
+                            <title />
+                            <rect class="cls-1" height="465.06" rx="107.23" ry="107.23" width="465.06" x="23.47"
+                                y="23.47" />
+                            <path class="cls-2"
+                                d="M331,115.22a66.92,66.92,0,0,1,66.65,66.65V330.13A66.92,66.92,0,0,1,331,396.78H181a66.92,66.92,0,0,1-66.65-66.65V181.87A66.92,66.92,0,0,1,181,115.22H331m0-31H181c-53.71,0-97.66,44-97.66,97.66V330.13c0,53.71,44,97.66,97.66,97.66H331c53.71,0,97.66-44,97.66-97.66V181.87c0-53.71-43.95-97.66-97.66-97.66Z" />
+                            <path class="cls-2"
+                                d="M256,198.13A57.87,57.87,0,1,1,198.13,256,57.94,57.94,0,0,1,256,198.13m0-31A88.87,88.87,0,1,0,344.87,256,88.87,88.87,0,0,0,256,167.13Z" />
+                            <circle class="cls-2" cx="346.81" cy="163.23" r="21.07" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/@Shodiyorbek_7">
+                        <!-- SVG 28x28 uchun o'ralgan div -->
+                        <div class="w-7 h-7">
+                            <svg id="Layer_1" class="w-full h-full" style="enable-background:new 0 0 512 512;"
+                                viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="256" x2="256"
+                                        y1="0" y2="510.1322">
+                                        <stop offset="0" stop-color="#41BCE7" />
+                                        <stop offset="1" stop-color="#22A6DC" />
+                                    </linearGradient>
+                                </defs>
+                                <circle fill="url(#SVGID_1_)" cx="256" cy="256" r="256" />
+                                <g>
+                                    <path fill="#FFFFFF"
+                                        d="M380.6,147.3l-45.7,230.5c0,0-6.4,16-24,8.3l-105.5-80.9L167,286.7l-64.6-21.7c0,0-9.9-3.5-10.9-11.2 c-1-7.7,11.2-11.8,11.2-11.8l256.8-100.7C359.5,141.2,380.6,131.9,380.6,147.3z" />
+                                    <path fill="#D2E4F0"
+                                        d="M197.2,375.2c0,0-3.1-0.3-6.9-12.4c-3.8-12.1-23.3-76.1-23.3-76.1l155.1-98.5c0,0,9-5.4,8.6,0 c0,0,1.6,1-3.2,5.4c-4.8,4.5-121.8,109.7-121.8,109.7" />
+                                    <path fill="#B5CFE4" d="M245.8,336.2l-41.7,38.1c0,0-3.3,2.5-6.8,0.9l8-70.7" />
+                                </g>
+                            </svg>
+                        </div>
+
+                    </a>
+                    <a href="#" class="bg-blue-400 text-white text-[18px] px-3 py-[2px] rounded-full">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

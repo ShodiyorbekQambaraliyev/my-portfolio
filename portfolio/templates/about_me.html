@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="">
+    <div class="w-full h-[580px] bg-[#000] pt-[40px]">
+        <div class="flex container w-[900px] items-center justify-between">
+            <div class="">
+                <a href="{% url 'home' %}">
+                    <img class="w-[90px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
+                </a>
+            </div>
+            <div class="">
+                <i class="fa-solid fa-bars-staggered text-white text-[28px]"></i>
+            </div>
+        </div>
+        <div class="text-white container w-[900px] text-center flex flex-col items-center justify-center pt-[80px]">
+            <h1 class="text-[46px] font-regular uppercase">about me</h1>
+            <h2 class="text-[24px] font-regular uppercase">IT’S A-ME, SHODIYORBEK!</h2>
+        </div>
+    </div>
+
+
+    <div class="w-full container flex flex-col items-center justify-between">
+        <div class="w-[600px] pt-[50px]">
+            <h2 class="text-[32px] font-bold">My Background</h2>
+            <p class="text-[16px] font-regular">
+                I am a young backend and frontend developer who is interested in programming and currently working in
+                this field.
+                I specialize in working with the Django framework. Additionally, I create user interfaces using
+                technologies such as
+                HTML, CSS, JavaScript, and Tailwind CSS.
+
+                My technologies:
+
+                Backend: Python, Django, REST API
+
+                Frontend: HTML, CSS, JavaScript, Tailwind CSS, Bootstrap
+
+                Database: SQLite, PostgreSQL
+
+                Version control: Git, GitHub
+
+                Project experience: Portfolio websites, online market (Uzum Market project), blog systems <br>
+                <a class="text-blue-500 underline" href="#">🔗 Some of my projects are published online and can be
+                    viewed via the link.</a>
+                I am currently continuing to improve myself and striving to learn new technologies.
+                My goal is to gain experience through real-world projects and become a professional developer.
+            </p>
+
+
+            <h2 class="text-[32px] font-bold mt-[70px]">My Hobbies and Interests</h2>
+            <p class="flex flex-wrap gap-2 items-center text-[16px]">
+                
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="container flex items-center justify-center mt-[60px] gap-4 text-center">
+        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="#"><i
+                class="fa-solid fa-arrow-right"></i> Contact me</a>
+    </div>
+
+    <div class="bg-[#000] flex items-center justify-center mt-[60px]">
+        <div class="container h-[300px] bg-[#000] mt-[80px] text-white flex items-center justify-between">
+            <div class="flex gap-4">
+                <a class="uppercase" href="#">contact</a>
+            </div>
+            <div>
+                <p class="text-[16px] font-medium">shodiyorbek057@gmail.com</p>
+                <p class="text-[16px] font-semibold mt-1"><i class="fa-solid fa-phone-volume text-[18px]"></i> +998 97
+                    213 8503</p>
+            </div>
+            <img class="w-[100px] h-[100px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

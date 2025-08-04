@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="">
+    <div class="w-full h-[580px] bg-[#000] pt-[40px]">
+        <div class="flex container w-[900px] items-center justify-between">
+            <div class="">
+                <a href="{% url 'home' %}">
+                    <img class="w-[90px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
+                </a>
+            </div>
+            <div class="">
+                <i class="fa-solid fa-bars-staggered text-white text-[28px]"></i>
+            </div>
+        </div>
+        <div class="text-white container w-[900px] text-center flex flex-col items-center justify-center pt-[80px]">
+            <h1 class="text-[46px] font-regular uppercase">MY PROJECTS</h1>
+            <h2 class="text-[24px] font-regular uppercase tracking-[7px]">MADE WITH LOVE</h2>
+        </div>
+    </div>
+
+
+
+    <div class="flex container justify-between mt-[60px] flex-wrap gap-4">
+        <div class="w-[320px] h-[405px] bg-[url('/img/your-bg.png')] bg-cover bg-center bg-no-repeat p-4 rounded-lg bg-[#000]">
+            <h2 class="text-white text-[20px] font-bold">Project Title - Uzum Market</h2>
+            <a class="text-white underline" href="https://uzummarket.pythonanywhere.com/">Loyha linki</a>
+        </div>
+
+        <div class="w-[320px] h-[405px] bg-[url('/img/your-bg.png')] bg-cover bg-center bg-no-repeat p-4 rounded-lg bg-[#000]">
+            <h2 class="text-white text-[20px] font-bold">Project Title - Uzum Market</h2>
+            <a class="text-white underline" href="https://uzummarket.pythonanywhere.com/">Loyha linki</a>
+        </div>
+
+        <div class="w-[320px] h-[405px] bg-[url('/img/your-bg.png')] bg-cover bg-center bg-no-repeat p-4 rounded-lg bg-[#000]">
+            <h2 class="text-white text-[20px] font-bold">Project Title - Uzum Market</h2>
+            <a class="text-white underline" href="https://uzummarket.pythonanywhere.com/">Loyha linki</a>
+        </div>
+
+        <div class="w-[320px] h-[405px] bg-[url('/img/your-bg.png')] bg-cover bg-center bg-no-repeat p-4 rounded-lg bg-[#000]">
+            <h2 class="text-white text-[20px] font-bold">Project Title - Uzum Market</h2>
+            <a class="text-white underline" href="https://uzummarket.pythonanywhere.com/">Loyha linki</a>
+        </div>
+    </div>
+
+
+    <div class="container flex items-center justify-center mt-[60px] gap-4 text-center">
+        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="#"><i
+                class="fa-solid fa-arrow-right"></i> About me</a>
+        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="#"><i
+                class="fa-solid fa-arrow-right"></i> Contact me</a>
+    </div>
+
+    <div class="bg-[#000] flex items-center justify-center mt-[60px]">
+        <div class="container h-[300px] bg-[#000] mt-[80px] text-white flex items-center justify-between">
+            <div class="flex gap-4">
+                <a class="uppercase" href="#">about</a>
+                <a class="uppercase" href="#">contact</a>
+            </div>
+            <div>
+                <p class="text-[16px] font-medium">shodiyorbek057@gmail.com</p>
+                <p class="text-[16px] font-semibold mt-1"><i class="fa-solid fa-phone-volume text-[18px]"></i> +998 97
+                    213 8503</p>
+            </div>
+            <img class="w-[100px] h-[100px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

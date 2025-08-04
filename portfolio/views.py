@@ -6,3 +6,6 @@ def home(request):
 
 def about_me(request):
     return render(request, 'about_me.html')
+
+def my_projects(request):
+    return render(request, 'my_projects.html')

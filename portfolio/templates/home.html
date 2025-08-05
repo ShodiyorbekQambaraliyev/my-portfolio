@@ -4,6 +4,8 @@
 {% block content %}
 
 <div class="">
+    {% for home in home %}
+
     <div class="w-full h-[580px] bg-[#000] pt-[40px]">
         <div class="flex container w-[900px] items-center justify-between">
             <div class="">
@@ -15,9 +17,10 @@
                 <i class="fa-solid fa-bars-staggered text-white text-[28px]"></i>
             </div>
         </div>
+
         <div class="text-white container w-[900px] text-center flex flex-col items-center justify-center pt-[80px]">
-            <h1 class="text-[46px] font-regular">Shodiyorbek Qambaraliyev</h1>
-            <h2 class="text-[24px] font-regular uppercase">web - developer</h2>
+            <h1 class="text-[46px] font-regular">{{ home.fullname }}</h1>
+            <h2 class="text-[24px] font-regular uppercase">{{ home.darajangiz }}</h2>
         </div>
     </div>
 
@@ -25,13 +28,7 @@
     <div class="w-full container flex flex-col items-center justify-between">
         <div class="w-[600px] pt-[50px]">
             <h2 class="text-[32px] font-bold">About me</h2>
-            <p class="text-[16px] font-regular">Hello! I’m Shodiyorbek, a passionate Web Developer from Izboskan,
-                Andijon. I specialize in both frontend and backend development, building modern, responsive, and
-                user-friendly websites. I’m constantly learning new things and love solving problems with clean code.
-                Currently, I’m working on personal projects and leveling up my skills to become a full-stack expert.
-                <br> Let's build an amazing application together!
-            </p>
-
+            <p class="text-[16px] font-regular">{{ home.information_about_yourself }}</p>
             <h2 class="text-[32px] font-bold mt-[70px]">My Skills</h2>
             <p class="flex flex-wrap gap-2 items-center text-[16px]">
                 <span class="flex items-center gap-1 px-2 py-1 rounded-md">
@@ -122,20 +119,25 @@
                         <g id="Layer_1" />
                     </svg>Python
                 </span>
-                <span class="flex items-center gap-1 px-2 py-1 rounded-md">Django</span>
-                <span class="flex items-center gap-1 px-2 py-1 rounded-md">RestAPI</span>
+                <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
+                        src="{% static 'img/9118014_django_fill_icon.png' %}" alt=""> Django</span>
+                <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
+                        src="{% static 'img/rest-api-icon.png' %}" alt=""> RestAPI</span>
                 <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
                         src="{% static 'img/bootstrap.png' %}" alt=""> Bootstrap</span>
                 <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
                         src="{% static 'img/tailwind.png' %}" alt=""> Tailwind</span>
                 <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
                         src="{% static 'img/database.png' %}" alt=""> SQLite</span>
-                <span class="flex items-center gap-1 px-2 py-1 rounded-md">PostgreSQL</span>
-                <span class="flex items-center gap-1 px-2 py-1 rounded-md">GitHub</span>
+                <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
+                        src="{% static 'img/4691328_postgresql_icon.png' %}" alt=""> PostgreSQL</span>
+                <span class="flex items-center gap-1 px-2 py-1 rounded-md"><img class="w-[16px]"
+                        src="{% static 'img/github.png' %}" alt=""> GitHub</span>
             </p>
 
         </div>
     </div>
+    {% endfor %}
     <div class="flex container justify-between mt-[60px]">
         <div class="w-[320px] h-[405px] bg-cover bg-center bg-no-repeat bg-[#000] p-4">
             <h2 class="text-white text-[20px] font-bold">Project Title - Uzum Market</h2>
@@ -155,10 +157,10 @@
     </div>
 
     <div class="container flex items-center justify-center mt-[60px] gap-4 text-center">
-        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="{% url 'my_projects' %}"><i
-                class="fa-solid fa-arrow-right"></i> All Projects</a>
-        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="{% url 'about_me' %}"><i
-                class="fa-solid fa-arrow-right"></i> About me</a>
+        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500"
+            href="{% url 'my_projects' %}"><i class="fa-solid fa-arrow-right"></i> All Projects</a>
+        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500"
+            href="{% url 'about_me' %}"><i class="fa-solid fa-arrow-right"></i> About me</a>
         <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="#"><i
                 class="fa-solid fa-arrow-right"></i> Contact me</a>
     </div>
@@ -166,9 +168,9 @@
     <div class="bg-[#000] flex items-center justify-center mt-[60px]">
         <div class="container h-[300px] bg-[#000] mt-[80px] text-white flex items-center justify-between">
             <div class="flex gap-4">
-                <a class="uppercase" href="#zzzzz">projects</a>
-                <a class="uppercase" href="#">about</a>
-                <a class="uppercase" href="#">contact</a>
+                <a class="uppercase" href="{% url 'my_projects' %}">projects</a>
+                <a class="uppercase" href="{% url 'about_me' %}">about</a>
+                <a class="uppercase" href="{% url 'contact' %}">contact</a>
             </div>
             <div>
                 <p class="text-[16px] font-medium">shodiyorbek057@gmail.com</p>
@@ -178,6 +180,8 @@
             <img class="w-[100px] h-[100px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
         </div>
     </div>
+
+
 </div>
 
 {% endblock %}

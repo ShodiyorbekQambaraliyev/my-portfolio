@@ -13,7 +13,14 @@ class Menu(models.Model):
 class Home(models.Model):
     fullname = models.CharField(max_length=255)
     darajangiz = models.CharField(max_length=255)
-    information_about_yourself = models.CharField(max_length=255)
+    information_about_yourself = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.fullname
+
+class Skils(models.Model):
+    skils_name = models.CharField(max_length=255)
+    skils_logo = models.ImageField(upload_to='skils_logo')
+
+    def __str__(self):
+        return self.skils_name

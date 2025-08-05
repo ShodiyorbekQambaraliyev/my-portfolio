@@ -13,26 +13,26 @@
 <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
 
 <div class="relative z-10 container flex items-center justify-center h-screen text-gray-100">
+
     <div class="flex">
+        {% for menu in menu %}
         <div class="flex w-[512px]">
             <div class="mt-[30px]">
                 <h1 class="text-[24px] font-medium  rotate-[-90deg]">Menu</h1>
             </div>
             <div>
-                <h2 class="text-[64px] font-bold ">Shodiyorbek's</h2>
-                <h2 class="text-[64px] font-bold">Portfolio</h2>
-                <h2 class="text-[64px] font-bold">Website</h2>
+                <h2 class="text-[64px] font-bold ">{{ menu.name }}'s</h2>
+                <h2 class="text-[64px] font-bold">Portfolio <br> Website</h2>
             </div>
         </div>
 
         <div class="w-[512px] flex items-end justify-center">
             <div>
-                <p class="text-[24px] font-medium">shodiyorbek057@gmail.com</p>
-                <p class="text-[24px] font-semibold mt-1"><i class="fa-solid fa-phone-volume text-[20px]"></i> +998 97
-                    213 8503</p>
+                <p class="text-[24px] font-medium">{{ menu.gmail }}</p>
+                <p class="flex text-[24px] font-semibold mt-1"><img class="w-[24px] mr-[8px]" src="{% static 'img/8726191.svg' %}" alt=""> {{ menu.phone }}</p>
 
                 <div class="flex gap-4 mt-3">
-                    <a href="https://www.instagram.com/shodiyorbek.qambaraliyev/">
+                    <a href="{{ menu.insta_link }}">
                         <svg id="Apple" viewBox="0 0 512 512" width="28" height="28" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
@@ -70,7 +70,7 @@
                             <circle class="cls-2" cx="346.81" cy="163.23" r="21.07" />
                         </svg>
                     </a>
-                    <a href="https://t.me/@Shodiyorbek_7">
+                    <a href="{{ menu.telegram_link }}">
                         <!-- SVG 28x28 uchun o'ralgan div -->
                         <div class="w-7 h-7">
                             <svg id="Layer_1" class="w-full h-full" style="enable-background:new 0 0 512 512;"
@@ -98,6 +98,7 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 

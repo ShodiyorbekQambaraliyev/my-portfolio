@@ -12,3 +12,6 @@ def my_projects(request):
 
 def about_me(request):
     return render(request, 'about_me.html')
+
+def contact(request):
+    return render(request, 'contact.html')

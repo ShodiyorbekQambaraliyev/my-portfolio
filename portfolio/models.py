@@ -24,3 +24,12 @@ class Skils(models.Model):
 
     def __str__(self):
         return self.skils_name
+    
+class Project(models.Model):
+    project_image = models.ImageField(upload_to='project_image')
+    project_name = models.CharField(max_length=255)
+    project_description = models.CharField(max_length=1000)
+    project_link = models.URLField()
+
+    def __str__(self):
+        return self.project_name

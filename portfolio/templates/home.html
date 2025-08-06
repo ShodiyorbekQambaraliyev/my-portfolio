@@ -25,7 +25,7 @@
     </div>
 
 
-    <div class="w-full container flex flex-col items-center justify-between">
+    <div class="w-full container flex flex-col items-center">
         <div class="w-[800px] pt-[50px]">
             <h2 class="text-[32px] font-bold">About me</h2>
             <p class="text-[16px] font-regular">{{ home.information_about_yourself }}</p>
@@ -37,149 +37,51 @@
                         alt="l"> {{ skils.skils_name }}</span>
                 {% endfor %}
             </p>
-
         </div>
     </div>
-    <div class="flex container gap-4 mt-[60px]">
+
+    <div class="container w-[800px]">
+        <h2 class="text-[32px] font-bold mt-[50px]">New Project</h2>
+
+        <div class="flex container items-center justify-center gap-2 mt-[10px]">
+
+            <div
+                class="w-[260px] rounded-xl border shadow-lg overflow-hidden bg-white hover:scale-105 transition-transform duration-500">
+                <div class="relative">
+                    <img src="{% static 'img/sh_logo.png' %}" alt="Gaming Chair" class="w-full h-[250px] object-cover">
 
 
-        <div class="w-[320px] rounded-xl border shadow-lg overflow-hidden bg-white hover:scale-105 transition-transform duration-500">
-            <div class="relative">
-                <img src="{% static 'img/sh_logo.png' %}" alt="Gaming Chair" class="w-full h-[250px] object-cover">
+                    <div class="absolute top-2 right-2">
+                        <button class="text-xl text-gray-700"><i class="fa-regular fa-heart text-red-500"></i></button>
+                    </div>
+                </div>
 
+                <div class="p-4">
+                    <div class="mb-1">
+                        <span class="text-[20px] font-bold text-blue-600">Uzum Market</span>
+                    </div>
 
-                <div class="absolute top-2 right-2">
-                    <button class="text-xl text-gray-700"><i class="fa-regular fa-heart text-red-500"></i></button>
+                    <p class="text-sm text-gray-700">
+                        Loyha juda mukammal ishlangan deyarli hamma mahsulotlarni ko‘rish va sotib olish imkoniyatiga
+                        ega bolasiz.
+                    </p>
+
+                    <div class="flex items-center text-sm text-gray-600 mt-1">
+                        <span class="text-yellow-500 mr-1"><i class="fa-solid fa-star"></i></span>
+                        <span>4.4</span>
+                        <span class="ml-1 text-gray-500">(109 ta aksiya)</span>
+                    </div>
+
+                    <a href="https://uzum.uz/uz?srsltid=AfmBOopFoPZrsEqsA2ZrmhAGb2T1nR9vY3dldYNq8oYjUW19trDACmTg">
+                        <button
+                            class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                            Loyhani korish
+                        </button>
+                    </a>
                 </div>
             </div>
 
-            <div class="p-4">
-                <div class="mb-1">
-                    <span class="text-[20px] font-bold text-blue-600">Uzum Market</span>
-                </div>
-
-                <p class="text-sm text-gray-700">
-                    Loyha juda mukammal ishlangan deyarli hamma mahsulotlarni ko‘rish va sotib olish imkoniyatiga ega bolasiz.
-                </p>
-
-                <div class="flex items-center text-sm text-gray-600 mt-1">
-                    <span class="text-yellow-500 mr-1"><i class="fa-solid fa-star"></i></span>
-                    <span>4.4</span>
-                    <span class="ml-1 text-gray-500">(109 ta aksiya)</span>
-                </div>
-
-                <a href="https://uzum.uz/uz?srsltid=AfmBOopFoPZrsEqsA2ZrmhAGb2T1nR9vY3dldYNq8oYjUW19trDACmTg">
-                    <button
-                        class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
-                        Loyhani korish
-                    </button>
-                </a>
-            </div>
         </div>
-
-        <div class="w-[320px] rounded-xl border shadow-lg overflow-hidden bg-white hover:scale-105 transition-transform duration-500">
-            <div class="relative">
-                <img src="{% static 'img/sh_logo.png' %}" alt="Gaming Chair" class="w-full h-[250px] object-cover">
-
-
-                <div class="absolute top-2 right-2">
-                    <button class="text-xl text-gray-700"><i class="fa-regular fa-heart text-red-500"></i></button>
-                </div>
-            </div>
-
-            <div class="p-4">
-                <div class="mb-1">
-                    <span class="text-[20px] font-bold text-blue-600">Uzum Market</span>
-                </div>
-
-                <p class="text-sm text-gray-700">
-                    Loyha juda mukammal ishlangan deyarli hamma mahsulotlarni ko‘rish va sotib olish imkoniyatiga ega bolasiz.
-                </p>
-
-                <div class="flex items-center text-sm text-gray-600 mt-1">
-                    <span class="text-yellow-500 mr-1"><i class="fa-solid fa-star"></i></span>
-                    <span>4.4</span>
-                    <span class="ml-1 text-gray-500">(109 ta aksiya)</span>
-                </div>
-
-                <a href="https://uzum.uz/uz?srsltid=AfmBOopFoPZrsEqsA2ZrmhAGb2T1nR9vY3dldYNq8oYjUW19trDACmTg">
-                    <button
-                        class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
-                        Loyhani korish
-                    </button>
-                </a>
-            </div>
-        </div>
-
-        
-       <div class="w-[320px] rounded-xl border shadow-lg overflow-hidden bg-white hover:scale-105 transition-transform duration-500">
-            <div class="relative">
-                <img src="{% static 'img/sh_logo.png' %}" alt="Gaming Chair" class="w-full h-[250px] object-cover">
-
-
-                <div class="absolute top-2 right-2">
-                    <button class="text-xl text-gray-700"><i class="fa-regular fa-heart text-red-500"></i></button>
-                </div>
-            </div>
-
-            <div class="p-4">
-                <div class="mb-1">
-                    <span class="text-[20px] font-bold text-blue-600">Uzum Market</span>
-                </div>
-
-                <p class="text-sm text-gray-700">
-                    Loyha juda mukammal ishlangan deyarli hamma mahsulotlarni ko‘rish va sotib olish imkoniyatiga ega bolasiz.
-                </p>
-
-                <div class="flex items-center text-sm text-gray-600 mt-1">
-                    <span class="text-yellow-500 mr-1"><i class="fa-solid fa-star"></i></span>
-                    <span>4.4</span>
-                    <span class="ml-1 text-gray-500">(109 ta aksiya)</span>
-                </div>
-
-                <a href="https://uzum.uz/uz?srsltid=AfmBOopFoPZrsEqsA2ZrmhAGb2T1nR9vY3dldYNq8oYjUW19trDACmTg">
-                    <button
-                        class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
-                        Loyhani korish
-                    </button>
-                </a>
-            </div>
-        </div>
-
-        <div class="w-[320px] rounded-xl border shadow-lg overflow-hidden bg-white hover:scale-105 transition-transform duration-500">
-            <div class="relative">
-                <img src="{% static 'img/sh_logo.png' %}" alt="Gaming Chair" class="w-full h-[250px] object-cover">
-
-
-                <div class="absolute top-2 right-2">
-                    <button class="text-xl text-gray-700"><i class="fa-regular fa-heart text-red-500"></i></button>
-                </div>
-            </div>
-
-            <div class="p-4">
-                <div class="mb-1">
-                    <span class="text-[20px] font-bold text-blue-600">Uzum Market</span>
-                </div>
-
-                <p class="text-sm text-gray-700">
-                    Loyha juda mukammal ishlangan deyarli hamma mahsulotlarni ko‘rish va sotib olish imkoniyatiga ega bolasiz.
-                </p>
-
-                <div class="flex items-center text-sm text-gray-600 mt-1">
-                    <span class="text-yellow-500 mr-1"><i class="fa-solid fa-star"></i></span>
-                    <span>4.4</span>
-                    <span class="ml-1 text-gray-500">(109 ta aksiya)</span>
-                </div>
-
-                <a href="https://uzum.uz/uz?srsltid=AfmBOopFoPZrsEqsA2ZrmhAGb2T1nR9vY3dldYNq8oYjUW19trDACmTg">
-                    <button
-                        class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-semibold">
-                        Loyhani korish
-                    </button>
-                </a>
-            </div>
-        </div>
-
     </div>
 
     <div class="container flex items-center justify-center mt-[60px] gap-4 text-center">

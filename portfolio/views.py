@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Menu, Home, Skils
+from .models import Menu, Home, Skils, Project
 
 def menu(request):
     menu = Menu.objects.all()
@@ -8,7 +8,8 @@ def menu(request):
 def home(request):
     home = Home.objects.all()
     skils = Skils.objects.all()
-    return render(request, 'home.html', {'home': home, 'skils': skils})
+    project = Project.objects.all()
+    return render(request, 'home.html', {'home': home, 'skils': skils, 'project': project})
 
 
 def my_projects(request):

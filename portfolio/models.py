@@ -26,6 +26,7 @@ class Skils(models.Model):
         return self.skils_name
     
 class Project(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
     project_image = models.ImageField(upload_to='project_image')
     project_name = models.CharField(max_length=255)
     project_description = models.CharField(max_length=1000)

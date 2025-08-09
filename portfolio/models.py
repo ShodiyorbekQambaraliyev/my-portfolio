@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class Menu(models.Model):
     name = models.CharField(max_length=255)
     gmail = models.CharField(max_length=255)
@@ -26,7 +28,6 @@ class Skils(models.Model):
         return self.skils_name
     
 class Project(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
     project_image = models.ImageField(upload_to='project_image')
     project_name = models.CharField(max_length=255)
     project_description = models.CharField(max_length=1000)
@@ -34,3 +35,10 @@ class Project(models.Model):
 
     def __str__(self):
         return self.project_name
+    
+class Resume(models.Model):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='resumes/')
+
+    def __str__(self):
+        return self.title

@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<div class="">
+<div class="bg-[#111827]">
     <div class="w-full h-[580px] bg-[#000] pt-[40px]">
-        <div class="flex container w-[900px] items-center justify-between">
+        <div class="flex container w-[1100px] items-center justify-between">
             <div class="">
                 <a href="{% url 'home' %}">
                     <img class="w-[90px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
@@ -16,16 +16,16 @@
             </div>
         </div>
         <div class="text-white container w-[900px] text-center flex flex-col items-center justify-center pt-[80px]">
-            <h1 class="text-[46px] font-regular uppercase">about me</h1>
-            <h2 class="text-[24px] font-regular uppercase">IT’S A-ME, SHODIYORBEK!</h2>
+            <h1 class="text-[56px] font-regular uppercase text-blue-600">about me</h1>
+            <h2 class="text-[26px] font-regular uppercase">IT’S A-ME, SHODIYORBEK!</h2>
         </div>
     </div>
 
 
     <div class="w-full container flex flex-col items-center justify-between">
-        <div class="w-[800px] pt-[50px]">
-            <h2 class="text-[32px] font-bold">My Background</h2>
-            <p class="text-[16px] font-regular">
+        <div class="w-[1100px] pt-[50px]">
+            <h2 class="text-[34px] font-bold text-blue-600">My Background</h2>
+            <p class="text-[18px] font-regular text-[#b6bac1]">
                 I am a young backend and frontend developer who is interested in programming and currently working in
                 this field.
                 I specialize in working with the Django framework. Additionally, I create user interfaces using
@@ -43,15 +43,15 @@
                 Version control: Git, GitHub
 
                 Project experience: Portfolio websites, online market (Uzum Market project), blog systems <br>
-                <a class="text-blue-500 underline" href="#">🔗 Some of my projects are published online and can be
+                <a class="text-blue-700 underline" href="#">🔗 Some of my projects are published online and can be
                     viewed via the link.</a> <br>
                 I am currently continuing to improve myself and striving to learn new technologies.
                 My goal is to gain experience through real-world projects and become a professional developer.
             </p>
 
 
-            <h2 class="text-[32px] font-bold mt-[70px]">My Hobbies and Interests</h2>
-            <p class="flex flex-wrap gap-2 items-center text-[16px]">
+            <h2 class="text-[34px] font-bold mt-[70px] text-blue-600">My Hobbies and Interests</h2>
+            <p class="flex flex-wrap gap-2 items-center text-[18px] font-regular text-[#b6bac1]">
                 I have several hobbies and interests that I enjoy in my free time. I love coding and building websites because it allows me to be creative and solve problems. I also enjoy reading books, especially those about technology and self-improvement. Listening to music helps me relax, and I sometimes draw or design for fun. In addition, I like watching educational videos and learning new skills online. These hobbies not only keep me entertained but also help me grow as a person.
             </p>
 
@@ -60,12 +60,13 @@
 
 
     <div class="container flex items-center justify-center mt-[60px] gap-4 text-center">
-        <a class="bg-[#d9d9d9] py-[6px] px-[12px] border-2 border-[#d9d9d9] hover:border-blue-500" href="{% url 'contact' %}"><i
-                class="fa-solid fa-arrow-right"></i> Contact me</a>
+        <a class="bg-blue-600 text-white py-[6px] px-[12px] border-2 border-blue-600 hover:border-blue-400 rounded-full" href="{% url 'contact' %}">
+            <i class="fa-solid fa-arrow-right"></i> Contact me
+        </a>
     </div>
 
     <div class="bg-[#000] flex items-center justify-center mt-[60px]">
-        <div class="w-[900px] h-[250px] bg-[#000] mt-[10px] text-white flex items-center justify-between">
+        <div class="w-[1100px] h-[250px] bg-[#000] mt-[10px] text-white flex items-center justify-between text-[20px]">
             <div class="flex gap-4">
                 <div class="flex gap-4">
                 <a class="uppercase" href="{% url 'my_projects' %}">projects</a>
@@ -74,9 +75,10 @@
             </div>
             </div>
             <div>
-                <p class="text-[16px] font-medium">shodiyorbek057@gmail.com</p>
-                <p class="text-[16px] font-semibold mt-1"><i class="fa-solid fa-phone-volume text-[18px]"></i> +998 97
-                    213 8503</p>
+                {% for menu in menu %}
+                <p class=" font-medium">{{ menu.gmail }}</p>
+                <p class="flex text-[20px] font-semibold mt-1"><img class="w-[24px] mr-[8px]" src="{% static 'img/8726191.svg' %}" alt=""> {{ menu.phone }}</p>
+                {% endfor %}
             </div>
             <img class="w-[100px] h-[100px]" src="{% static 'img/sh_logo.png' %}" alt="logo">
         </div>

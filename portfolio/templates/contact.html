@@ -36,14 +36,12 @@
                         class="inline-block ml-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
                         Ko'rish
                     </a>
+                    <a href="{% url 'download_resume' item.pk %}">Yuklab olish</a>
                 </div>
-                {% empty %}
-                <p class="text-gray-300">Hozircha resume mavjud emas.</p>
                 {% endfor %}
             </div>
         </div>
 
-        <!-- CONTACT FORM -->
         <div class="container max-w-[1000px] mx-auto py-14">
             <h2 class="text-[32px] font-bold text-blue-600 mb-6">Contact me</h2>
             <form class="space-y-6">

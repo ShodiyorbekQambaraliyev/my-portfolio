@@ -36,8 +36,9 @@
                         class="inline-block ml-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
                         Ko'rish
                     </a>
-                    <a href="{% url 'download_resume' item.pk %}">Yuklab olish</a>
                 </div>
+                {% empty %}
+                <p class="text-gray-300">Hozircha resume mavjud emas.</p>
                 {% endfor %}
             </div>
         </div>
